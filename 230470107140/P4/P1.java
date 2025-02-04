@@ -1,6 +1,6 @@
 //  Write a program to calculate area of circle, triangle and square using the concept of method overloading.
 
-public class T4p1{
+public class P1{
 
     public static void area(double r)
     {

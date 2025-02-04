@@ -2,7 +2,7 @@
 //public static int gcd(int num1, int num2) 
 //Write a program that prompts the user to enter two integers and compute the gcd of two integers.
 
-public class T4p2 {
+public class P2 {
 
     static int gcd = 1;
     public static int GCD(int num1,int num2)
