@@ -61,5 +61,6 @@ public class P1_part2 {
             }
         }while(v != 0);
         ch.close();
+        sc.close();
     }
 }
