@@ -13,7 +13,7 @@ public class P1_part2 {
             System.out.println("Enter Element");
             stack[top] = sc.nextInt();
         }
-       
+        sc.close();
     }
     public static void pop(){
         if(top == -1){
