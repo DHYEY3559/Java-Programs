@@ -1,3 +1,5 @@
+//this program is done by me
+
 import java.util.Scanner;
 
 class member{
