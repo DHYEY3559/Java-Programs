@@ -2,7 +2,7 @@ public class typewriter {
     public static void main(String[] args) {
         String text = "Hello world";
         System.out.println(text);
-        int delay = 500;
+        int delay = 200;
 
         for (char c : text.toCharArray()){
             System.out.print(c);
