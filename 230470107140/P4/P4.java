@@ -1,38 +1,60 @@
-class Employee { 
+class Member {
     String name;
     int age;
     String phone;
     String address;
     double salary;
-    String department;
 
-    public Employee(String name, int age, String phone, String address, double salary, String department) {
+    public Member(String name, int age, String phone, String address, double salary) {
         this.name = name;
         this.age = age;
         this.phone = phone;
         this.address = address;
         this.salary = salary;
-        this.department = department;
     }
 
-    public void displayEmployeeDetails() {
+    public void printSalary() {
+        System.out.println("Salary: " + salary);
+    }
+}
+
+class Employee extends Member {
+    String specialization;
+
+    public Employee(String name, int age, String phone, String address, double salary, String specialization) {
+        super(name, age, phone, address, salary);
+        this.specialization = specialization;
+    }
+
+    public void displayDetails() {
+        System.out.println("Employee Details:");
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
         System.out.println("Phone: " + phone);
         System.out.println("Address: " + address);
-        System.out.println("Salary: " + salary);
-        System.out.println("Department: " + department);
+        printSalary();
+        System.out.println("Specialization: " + specialization);
         System.out.println(" ");
     }
 }
 
-class Manager extends Employee {
+class Manager extends Member {
+    String department;
+
     public Manager(String name, int age, String phone, String address, double salary, String department) {
-        super(name, age, phone, address, salary, department);
+        super(name, age, phone, address, salary);
+        this.department = department;
     }
 
-    public void displayManagerDetails() {
-        displayEmployeeDetails();
+    public void displayDetails() {
+        System.out.println("Manager Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Phone: " + phone);
+        System.out.println("Address: " + address);
+        printSalary();
+        System.out.println("Department: " + department);
+        System.out.println(" ");
     }
 }
 
@@ -45,10 +67,7 @@ public class P4 {
         Manager mgr = new Manager("Priya Patel", 40, "9123456789", "Surat, India", 80000, "IT Department");
 
         // Displaying Employee and Manager details
-        System.out.println("Employee Details:");
-        emp.displayEmployeeDetails();
-
-        System.out.println("Manager Details:");
-        mgr.displayManagerDetails();
+        emp.displayDetails();
+        mgr.displayDetails();
     }
 }

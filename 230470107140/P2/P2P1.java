@@ -4,8 +4,8 @@ public class P2P1 {
         Scanner x = new Scanner(System.in);
         String mail;
         System.out.println("Enter Mail: ");
-        mail = x.next();
-        if (mail.length() <= 15){
+        mail = x.nextLine();
+        if (mail.length() <= 30){
             if (mail.contains("@") && mail.contains(".com") && !mail.contains(" ")) {
                 System.out.println("Valid");
             }
